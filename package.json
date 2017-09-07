@@ -1,0 +1,19 @@
+{
+  "name": "weddingsite",
+  "version": "0.0.1",
+  "description": "A site to handle our wedding RSVPs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GordIrvine/weddingRSVPSite.git"
+  },
+  "author": "Gordon Irvine Eibhlis Ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GordIrvine/weddingRSVPSite/issues"
+  },
+  "homepage": "https://github.com/GordIrvine/weddingRSVPSite#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "underscore": "^1.8.3"
+  }
+}
