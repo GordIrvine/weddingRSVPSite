@@ -2,58 +2,112 @@
 <html>
 
 <head lang="en">
-  <meta charset="utf-8">
+  <script src="https://use.fontawesome.com/4ec47933a7.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="_css/bootstrap.min.css">
+  <link rel="stylesheet" href="_css/styles.css">
   <meta name="description" content="Eibhlis and Gordon are getting married. Find all the details and RSVP here!">
-  <title>Eibhlis And Gordon's Wedding</title>
+  <title>Home | Eibhlis And Gordon's Wedding</title>
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.htm">Home</a></li>
-        <li><a href="venue.htm">Venue</a></li>
-        <li><a href="gifts.htm">Gifts</a></li>
-        <li><a href="rsvp.htm">RSVP</a></li>
-      </ul>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          <a href="index.htm" class="navbar-brand">Eibhlis and Gordon's Wedding</a><
+        </div>
+        <div class="collapse navbar-collapse" id="collapsemenu">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="venue.htm">Venue</a></li>
+            <li><a href="gifts.htm">Gifts</a></li>
+            <li class="navbar-rsvp"><a href="rsvp.htm">RSVP</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <img src="_images/lochbanner.jpg" alt="Eibhlis and Gordon Sitting by a loch">
-    <h1>Éibhlís and Gordon's Wedding</h1>
-    <h2>We're getting married! Hooray!</h2>
-    <p>Saturday June 9th - St. Andrews, Scotland</p>
-    <a href="rsvp.htm">RSVP</a>
+    <div class="imghead-index">
+      <div class="imghead-alpha">
+        <div class="container headertext text-center">
+          <h1>We're getting married!</h1>
+          <!-- <h2>Éibhlís and Gordon's Wedding</h2>           -->
+          <h2>Saturday June 9th - St. Andrews, Scotland</h2>
+          <a href="rsvp.htm" class="btn btn-default btn-lg" role="button">RSVP</a>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
-    <section>
-      <p>Please join Éibhlís and Gordon on Saturday, June 9th 2018 as we celebrate our wedding.</p>
-      <img src="_images/gordonstory.jpg" alt="Gordon in Kyoto">
-      <h3>Gordon's Story</h3>
-      <p>Some text about how cool gordon is</p>
-      <img src="_images/eibhlisstory.jpg" alt="Eibhlis in Tokyo">
-      <h3>Eibhlis' Story</h3>
-      <p>Some text about how cool eibhlis is</p>
-      <img src="_images/ourstory.jpg" alt="Dressed for the party">
-      <h3>Our Story</h3>
-      <p>Some text about how we met and stuff</p>
+    <section class="about-us">
+      <div class="container">
+        <h3>Please join Éibhlís and Gordon on Saturday, June 9th 2018 as we celebrate our wedding.</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="about-us-img" src="_images/gordonstory.jpg" alt="Gordon in Kyoto">
+            <h3>Gordon's Story</h3>
+            <p>Some text about how cool gordon is</p>
+          </div>
+          <div class="col-sm-4">
+            <img class="about-us-img" src="_images/eibhlisstory.jpg" alt="Eibhlis in Tokyo">
+            <h3>Eibhlis' Story</h3>
+            <p>Some text about how cool eibhlis is</p>
+          </div>
+          <div class="col-sm-4">
+            <img class="about-us-img" src="_images/ourstory.jpg" alt="Dressed for the party">
+            <h3>Our Story</h3>
+            <p>Some text about how we met and stuff</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <section>
-      <img src="_images/weddingdaybanner.jpg" alt="Copenhagen">
-      <h2>Wedding Day</h2>
-      <h3>Ceremony</h3>
-      <p>14:00<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
-      <h3>Evening Reception</h3>
-      <p>19:00<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
+
+    <section class="wedding-day-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Wedding Day</h3>
+          </div>
+        </div>
+        <div class="row">
+          <!-- <img src="_images/weddingdaybanner.jpg" alt="Copenhagen"> -->
+          <div class="col-sm-6">
+            <h4>Ceremony</h4>
+            <p>14:00<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
+          </div>
+          <div class="col-sm-6">
+            <h4>Evening Reception</h4>
+            <p>19:00<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  <footer>
-    <h4>Contact us<h4>
-    <h5>Gordon</h5>
-    <p>Phone : +353 838 884 729</p>
-    <p>Email : girvine01@gmail.com</p>
-    <p>Twitter : <a href="http://twitter.com/gordirvine" target="_blank">@GordIrvine</a></p>
-    <h5>Eibhlis</h5>
-    <p>Phone : +353 838 884 729</p>
-    <p>Email : eibhlisward1@gmail.com</p>
+  <footer class="footer">
+    <div class="container">
+      <h4>Contact us</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Gordon</h5>
+          <a href="http://twitter.com/gordirvine" target="_blank"><i class="fa fa-twitter  fa-2x" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+          <p>Phone : +353 838 884 729</p>
+          <p>Email : girvine01@gmail.com</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Eibhlis</h5>
+          <p>Phone : +353 838 884 729</p>
+          <p>Email : eibhlisward1@gmail.com</p>
+        </div>
+    </div>
+  </div>
   </footer>
 </body>
 </html>
