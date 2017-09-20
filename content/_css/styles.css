@@ -129,12 +129,15 @@ h3 {
   text-align: center;
 }
 
+.intro h3 {
+  margin-top: 0;
+}
+
 .about-us {
   text-align: center;
 }
 
 .about-us-img {
-  max-width: 150px;
   margin: 0 auto;
   display: block;
 }
