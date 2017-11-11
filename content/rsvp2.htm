@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="_css/bootstrap.min.css">
+  <link rel="stylesheet" href="_css/styles.css">
+  <meta name="description" content="RSVP page for Gordon and Eibhlis' wedding">
+  <title>RSVP | Eibhlis and Gordon's Wedding</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          <a href="index.htm" class="navbar-brand">Eibhlis and Gordon's Wedding</a>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsemenu">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="venue.htm">Venue</a></li>
+            <li><a href="gifts.htm">Gifts</a></li>
+            <li class="navbar-rsvp"><a href="rsvp2.htm">RSVP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="imghead">
+      <div class="imghead-alpha">
+        <div class="container headertext text-center">
+          <h2>RSVP</h2>
+          <p>Please respond by April 15th, 2018</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <section class="col-lg-12">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="inputFirstName">Name</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="text" id="inputFirstName" placeholder="Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <legend class="col-form-legend col-sm-2 control-label">Are you attending?</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <label class="radio-inline" for="yes">
+                  <input class="form-check-input" id="yes" name="attending" type="radio">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="radio-inline" for="no">
+                  <input class="form-check-input" id="no" name="attending" type="radio">
+                  No
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="plusOne">Are you bringing additional guests?</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="plusOne">
+            <option>Just me</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="inputEmail">Email Address</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="email" id="inputEmail" placeholder="Email address">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="inputDietaryRequirements">Any dietary requirements?</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="inputDietaryRequirements"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="inputAnyOtherInfo">Any other comments?</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="inputAnyOtherInfo"></textarea>
+            </div>
+          </div>
+          <input type="submit" class="btn btn-default pull-right" value="submit">
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <h4>Contact us<h4>
+      <div class="row">
+        <div class="col-md-6">
+        <h5>Gordon</h5>
+        <p>Phone : +353 838 884 729</p>
+        <p>Email : girvine01@gmail.com</p>
+        <p>Twitter : <a href="http://twitter.com/gordirvine" target="_blank">@GordIrvine</a></p>
+      </div>
+        <div class="col-md-6">
+        <h5>Eibhlis</h5>
+        <p>Phone : +353 838 884 729</p>
+        <p>Email : eibhlisward1@gmail.com</p>
+        </div>
+    </div>
+  </div>
+  </footer>
+
+  <script src="_js/jquery-3.2.1.min.js"></script>
+  <script src="_js/bootstrap.min.js"></script>
+  <script src="_js/script.js"></script>
+</body>
+
+</html>

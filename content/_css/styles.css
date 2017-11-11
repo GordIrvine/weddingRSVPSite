@@ -10,11 +10,13 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1, h2 {
   font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
 /* Header & Footer
@@ -121,6 +123,19 @@ color: rgba(255,206,143,.5);
   background-color: #3c4859;
   color: white;
   padding: 20px 0;
+  text-align: center;
+}
+
+.footer p>a {
+  color: white;
+}
+
+.footer-backtotop {
+  float: right;
+}
+
+.footer-backtotop a {
+  color: white;
 }
 
 /* body styles
@@ -144,6 +159,35 @@ h3 {
 
 .wedding-day-info {
   text-align: center;
+}
+
+.wedding-day-info h2{
+  padding-bottom: 20px;
+}
+
+.panel-default > .panel-heading {
+  background-color: whitesmoke;
+}
+
+iframe {
+  float: right;
+  padding-left: 10px;
+}
+.donate h2 {
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 150%;
+}
+
+.donate h2:nth-child(2) {
+  margin: 40px 0;
+  font-size: 2em;
+}
+
+.donation-img {
+  height: 30%;
+  width: 30%;
+  padding-top: 30px;
 }
 
 /* Form styles
