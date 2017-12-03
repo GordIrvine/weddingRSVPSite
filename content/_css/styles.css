@@ -190,6 +190,10 @@ iframe {
   padding-top: 30px;
 }
 
+.panel {
+  border-radius: 0;
+}
+
 /* Form styles
 ------------------------------------*/
 
