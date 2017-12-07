@@ -25,6 +25,7 @@ function successCallback(response){
     window.open("confirmation.htm", "_parent");
 }
 function errorCallback(error){
+  //gergre
     window.open("error.htm", "_parent");
 }
 
