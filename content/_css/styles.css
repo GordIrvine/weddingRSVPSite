@@ -203,3 +203,8 @@ iframe {
   font-weight: bold;
   margin-bottom: 0;
 }
+
+.invalid-feedback{
+  color: red;
+  font-weight: bold;
+}

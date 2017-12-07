@@ -51,63 +51,66 @@
         <form class="rsvp-form col-md-8 col-md-offset-2">
           <div class="form-group">
             <label for="inputFirstName">Name</label>
-            <input name ="name" class="form-control" type="text" id="inputFirstName" placeholder="Name">
-          </div>
+            <input name ="name" class="form-control" type="text" id="inputFirstName" placeholder="Name" required>
+            <div class="invalid-feedback hidden">
+              Please input your name.
+            </div>
+        </div>
 
           <div class="form-group">
             <label for="inputEmail">Email Address</label>
-            <input name ="email" class="form-control" type="email" id="inputEmail" placeholder="Email address">
+            <input name ="email" class="form-control" type="email" id="inputEmail" placeholder="Email address" required>
+            <div class="invalid-feedback hidden">
+              Please input a valid email - this will only be used if we need to contact you.
+            </div>
           </div>
 
           <div class="form-group">
             <label>Will you be attending?</label>
             <div class="radio">
               <label for="yesRadio">
-                <input name ="attending" id="yesRadio" type="radio" value="yes">
-                Yes
+                <input name ="attending" id="yesRadio" type="radio" value="yes" checked required>
+                Yes, I'll be there
               </label>
             </div>
             <div class="radio">
               <label for="noRadio">
                 <input name ="attending" id="noRadio" type="radio" value="no">
-                No
+                No, I can't make it.
               </label>
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="plusOne">Are you bringing additional guests?</label>
+          <div class="form-group attendeeQuestions">
+            <label for="plusOne">How many people are in your party?</label>
             <select name="guests" class="form-control" id="plusOne">
-            <option>Just me</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+            <option value="0">Just me</option>
+            <option value="1">Bringing a partner / plus one</option>
+            <option value="2">2 additional guests</option>
+            <option value="3">3 additional guests</option>
           </select>
           </div>
 
-          <div class="form-group">
-            <label for="additionalguest1">Additional Guest Name 1</label>
+          <div class="form-group attendeeQuestions hidden">
+            <label for="additionalguest1">Partner / Plus 1: Name</label>
             <input name="additionalguest1" class="form-control" type="text" id="additionalguest1" placeholder="Name">
           </div>
 
-          <div class="form-group">
+          <div class="form-group attendeeQuestions hidden">
             <label for="additionalguest2">Additional Guest Name 2</label>
             <input name="additionalguest2" class="form-control" type="text" id="additionalguest2" placeholder="Name">
           </div>
 
-          <div class="form-group">
+          <div class="form-group attendeeQuestions hidden">
             <label for="additionalguest3">Additional Guest Name 3</label>
             <input name="additionalguest3" class="form-control" type="text" id="additionalguest3" placeholder="Name">
           </div>
 
-          <div class="form-group">
+          <div class="form-group attendeeQuestions">
             <label for="inputDietaryRequirements">Any dietary requirements?</label>
             <textarea name="dietary_requirements" class="form-control" id="inputDietaryRequirements"></textarea>
           </div>
-          <div class="form-group">
-            <label for="inputAnyOtherInfo">Any other comments?</label>
-            <textarea name="comments" class="form-control" id="inputAnyOtherInfo"></textarea>
-          </div>
+
           <input type="submit" class="rsvp-submit btn btn-default pull-right" value="submit">
         </form>
       </div>
