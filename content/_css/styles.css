@@ -194,6 +194,12 @@ iframe {
   border-radius: 0;
 }
 
+.page-content-intro {
+  padding-top: 2rem;
+  text-align: justify;
+  font-size: 2rem;
+}
+
 /* Form styles
 ------------------------------------*/
 
