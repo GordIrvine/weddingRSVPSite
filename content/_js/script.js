@@ -3,8 +3,8 @@ var $form = $('.rsvp-form'),
 
 $('.rsvp-submit').on('click', function(e) {
   e.preventDefault();
-  var valid = validateRSVP();
   var attending = $('#yesRadio')[0].checked;
+  var valid = validateRSVP(attending);
   clearUnusedQuestions(attending);
   var numGuests = $('.rsvp-form select[name=guests]')[0].value;
   clearUnusedGuestsNames(numGuests);
@@ -28,12 +28,14 @@ function errorCallback(error){
     window.open("error.htm", "_parent");
 }
 
-function validateRSVP(){
+function validateRSVP(attending){
   var name = $('.rsvp-form input[name=name]')[0].value;
   var email = $('.rsvp-form input[name=email]')[0].value;
+  var coachAnswered = $('#noDundee')[0].checked || $('#yesDundee')[0].checked;
   var valid = true;
   $('.rsvp-form input[name=name]').siblings('.invalid-feedback').addClass('hidden');
   $('.rsvp-form input[name=email]').siblings('.invalid-feedback').addClass('hidden');
+  $('.rsvp-form .radio').siblings('.invalid-feedback').addClass('hidden');
 
   if(!name){
     $('.rsvp-form input[name=name]').siblings('.invalid-feedback').removeClass('hidden');
@@ -42,6 +44,10 @@ function validateRSVP(){
   if(!email || ! /^(.+)@(.+){2,}\.(.+){2,}$/.test(email)){
     $('.rsvp-form input[name=email]').siblings('.invalid-feedback').removeClass('hidden');
     valid=false;
+  }
+  if(attending && !coachAnswered){
+      $('.rsvp-form .radio').siblings('.invalid-feedback').removeClass('hidden');
+      valid=false;
   }
   return valid;
 }
@@ -71,6 +77,7 @@ function clearUnusedQuestions(attending){
   if(! attending) {
     $('.rsvp-form select[name=guests]')[0].value = 0;
     $('.rsvp-form textarea[name=dietary_requirements]')[0].value = "-";
+    $('#noDundee')[0].checked = "true";
   }
 }
 
@@ -95,9 +102,9 @@ var guestCount = $('.rsvp-form select[name=guests]');
 $('.rsvp-form input[name=attending]').change(function(){
   var notAttending = $('#noRadio')[0].checked;
   if(notAttending){
-    $(".attendeeQuestions").addClass("hidden");
+    $("#extendedForm").slideUp();
   } else {
-    $(".attendeeQuestions").removeClass("hidden");
+    $("#extendedForm").slideDown();
     showAdditionalGuestsQuestions(guestCount[0].value);
   }
 });

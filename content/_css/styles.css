@@ -144,6 +144,10 @@ h3 {
   text-align: center;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .intro h3 {
   margin-top: 0;
 }
@@ -205,7 +209,7 @@ iframe {
 }
 
 .hotel-image {
-  padding-bottom: 2rem; 
+  padding-bottom: 2rem;
 }
 
 @media (max-width:460px) {
