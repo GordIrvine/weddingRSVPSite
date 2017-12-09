@@ -144,9 +144,9 @@ h3 {
   text-align: center;
 }
 
-a {
+/*a {
   text-decoration: underline;
-}
+}*/
 
 .intro h3 {
   margin-top: 0;
@@ -203,19 +203,23 @@ iframe {
   text-align: justify;
   font-size: 2rem;
 }
+
 .hotel-name-header {
   text-align: center;
   padding-bottom: 1.5rem;
 }
 
-.hotel-image {
-  padding-bottom: 2rem;
+.content-paragraph {
+  font-size: 1.7rem;
 }
 
-@media (max-width:460px) {
-  .hotel-image {
-    Display: none;
-  }
+.directions-header {
+  padding-top: 1.5rem;
+}
+
+.hotel-image {
+  padding-bottom: 2rem;
+  margin: 0 auto;
 }
 
 /* Form styles
