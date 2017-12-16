@@ -49,7 +49,7 @@
     <section>
       <div class="container">
         <form class="rsvp-form col-md-8 col-md-offset-2">
-          <div class="form-group">
+          <div class="form-group" id="nameQuestion">
             <label for="inputFirstName">Name</label>
             <input name ="name" class="form-control" type="text" id="inputFirstName" placeholder="Name" required>
             <div class="invalid-feedback hidden">
@@ -57,8 +57,8 @@
             </div>
         </div>
 
-          <div class="form-group">
-            <label for="inputEmail">Email Address</label>
+          <div class="form-group" id="emailQuestion">
+            <label for="inputEmail">Email address</label>
             <input name ="email" class="form-control" type="email" id="inputEmail" placeholder="Email address" required>
             <div class="invalid-feedback hidden">
               Please input a valid email - this will only be used if we need to contact you.
@@ -92,17 +92,17 @@
             </div>
 
             <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest1">Partner / Plus 1: Name</label>
+              <label for="additionalguest1">Partner / Plus 1 name</label>
               <input name="additionalguest1" class="form-control" type="text" id="additionalguest1" placeholder="Name">
             </div>
 
             <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest2">Additional Guest Name 2</label>
+              <label for="additionalguest2">Additional guest name 2</label>
               <input name="additionalguest2" class="form-control" type="text" id="additionalguest2" placeholder="Name">
             </div>
 
             <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest3">Additional Guest Name 3</label>
+              <label for="additionalguest3">Additional guest name 3</label>
               <input name="additionalguest3" class="form-control" type="text" id="additionalguest3" placeholder="Name">
             </div>
 
@@ -111,8 +111,8 @@
               <textarea name="dietary_requirements" class="form-control" id="inputDietaryRequirements"></textarea>
             </div>
 
-            <div class="form-group attendeeQuestions">
-               <label for="usingRecommendedHotel">Will you be staying at the Premier Inn in Dundee Center?</label>
+            <div class="form-group attendeeQuestions" id="dundeeQuestion">
+               <label for="usingRecommendedHotel">Will you be staying at the Premier Inn, Dundee Centre?</label>
                <p style="font-style:italic">We are recommending this hotel for guests wanting cost effective accommodation
                  (see <a href="venue.htm">our Hotels page</a> for details).
                   If enough people stay there, we will put on a coach.</p>
@@ -137,12 +137,12 @@
         </form>
       </div>
     </section>
-    <main>
+  </main>
       <footer class="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p><a href="index.htm">Home</a> | <a href="venue.htm">Accommodation</a> | <a href="aboutus.htm">About us</a> | <a href="gifts.htm">Gifts</a> | <a href="rsvp.htm">RSVP</a>
+              <p><a href="index.htm">Home</a> | <a href="venue.htm">Hotels</a> | <a href="aboutus.htm">About us</a> | <a href="gifts.htm">Gifts</a> | <a href="rsvp.htm">RSVP</a>
                 <span class="footer-backtotop"><a href="#">Back to top</a></span> </p>
             </div>
           </div>
