@@ -216,7 +216,6 @@ iframe {
 .donation-img {
   height: 30%;
   width: 30%;
-  padding-top: 30px;
 }
 
 .panel {
@@ -247,6 +246,22 @@ iframe {
   margin: 0 auto;
 }
 
+.about-us--story-header {
+  padding-top: 1em;
+  padding-bottom: 0.8em;
+}
+
+.about-us--story-text {
+  margin-left: 2em;
+  margin-right: 2em;
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.about-us--story-text:last-child {
+  padding-bottom: 1.5em;
+}
+
 /* Form styles
 ------------------------------------*/
 
@@ -260,4 +275,11 @@ iframe {
 .invalid-feedback{
   color: red;
   font-weight: bold;
+}
+
+/* GoFundMe styles
+------------------------------------*/
+.badge-widget {
+  border: none;
+  background-image: url("https://funds.gofundme.com/css/3.0_donate/purple/widget.png");
 }
