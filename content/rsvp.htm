@@ -40,7 +40,7 @@
       <div class="imghead-alpha">
         <div class="container headertext text-center">
           <h1>RSVP</h1>
-          <h2>Please respond by April 15th, 2018</h2>
+          <h2>Please respond by March 9th, 2018</h2>
         </div>
       </div>
     </div>
@@ -66,45 +66,62 @@
           </div>
 
           <div class="form-group">
-            <label>Will you be attending?</label>
-            <div class="radio">
+            <label>Will you be attending?</label><br>
+            <div class="radio-inline">
               <label for="yesRadio">
                 <input name ="attending" id="yesRadio" type="radio" value="yes" checked required>
                 Yes, I'll be there
               </label>
             </div>
-            <div class="radio">
+            <div class="radio-inline">
               <label for="noRadio">
                 <input name ="attending" id="noRadio" type="radio" value="no">
                 No, I can't make it.
               </label>
             </div>
           </div>
+
         <div id="extendedForm">
+          <div class="form-group attendeeQuestions">
+            <label>Will you be bringing a partner?</label><br>
+            <div class="radio-inline">
+              <label for="yesPartner">
+                <input name ="partner" id="yesPartner" type="radio" value="yes" checked required>
+                Yes
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label for="noPartner">
+                <input name ="partner" id="noPartner" type="radio" value="no">
+                No
+              </label>
+            </div>
+          </div>
+
             <div class="form-group attendeeQuestions">
-              <label for="plusOne">How many people are in your party?</label>
-              <select name="guests" class="form-control" id="plusOne">
-              <option value="0">Just me</option>
-              <option value="1">Bringing a partner / plus one</option>
-              <option value="2">Bringing my family (2 additional guests)</option>
-              <option value="3">Bringing my family (3 additional guests)</option>
-            </select>
-            </div>
-
-            <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest1">Partner / Plus 1 name</label>
+              <label for="additionalguest1">Partner name</label>
               <input name="additionalguest1" class="form-control" type="text" id="additionalguest1" placeholder="Name">
+              <div class="invalid-feedback hidden">
+                Please let us know your partners name.
+              </div>
             </div>
 
-            <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest2">Additional guest name 2</label>
-              <input name="additionalguest2" class="form-control" type="text" id="additionalguest2" placeholder="Name">
+            <div class="form-group attendeeQuestions">
+              <label for="kids">Will you be bringing any children?</label><br>
+              <div class="radio-inline">
+                <label for="yesKids">
+                  <input name ="kids" id="yesKids" type="radio" value="yes" required>
+                  Yes
+                </label>
+              </div>
+              <div class="radio-inline">
+                <label for="noKids">
+                  <input name ="kids" id="noKids" type="radio" value="no" checked>
+                  No
+                </label>
+              </div>
             </div>
 
-            <div class="form-group attendeeQuestions hidden">
-              <label for="additionalguest3">Additional guest name 3</label>
-              <input name="additionalguest3" class="form-control" type="text" id="additionalguest3" placeholder="Name">
-            </div>
 
             <div class="form-group attendeeQuestions">
               <label for="inputDietaryRequirements">Any dietary requirements?</label>

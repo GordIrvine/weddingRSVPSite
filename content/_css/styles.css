@@ -78,7 +78,15 @@ color: blue;
   color: black;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: white
+  border-color: white;
+}
+
+.navbar-default .navbar-toggle{
+  background-color: white;
+}
+
+.navbar-toggle span {
+  font-size: 20px;
 }
 
 /*Header Images styles*/
@@ -275,6 +283,10 @@ iframe {
 .invalid-feedback{
   color: red;
   font-weight: bold;
+}
+
+.radio-inline>label{
+  font-weight: 400;
 }
 
 /* GoFundMe styles

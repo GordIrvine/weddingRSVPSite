@@ -6,12 +6,8 @@ $('.rsvp-submit').on('click', function(e) {
   var attending = $('#yesRadio')[0].checked;
   var valid = validateRSVP(attending);
   clearUnusedQuestions(attending);
-  var numGuests = $('.rsvp-form select[name=guests]')[0].value;
-  clearUnusedGuestsNames(numGuests);
 
-  if(!valid){
-//    location.hash = '#ewForm';
-  } else if(valid){
+  if(valid){
   var jqxhr = $.ajax({
     url: url,
     method: "GET",
@@ -33,10 +29,13 @@ function errorCallback(error){
 function validateRSVP(attending){
   var name = $('.rsvp-form input[name=name]')[0].value;
   var email = $('.rsvp-form input[name=email]')[0].value;
+  var partnerNamed = $('.rsvp-form input:text[name=additionalguest1]')[0].value;
   var coachAnswered = $('#noDundee')[0].checked || $('#yesDundee')[0].checked;
+  var isBringingPartner = $('#yesPartner')[0].checked;
   var valid = true;
   $('.rsvp-form input[name=name]').siblings('.invalid-feedback').addClass('hidden');
   $('.rsvp-form input[name=email]').siblings('.invalid-feedback').addClass('hidden');
+  $('.rsvp-form input[name=additionalguest1]').siblings('.invalid-feedback').addClass('hidden');
   $('.rsvp-form .radio').siblings('.invalid-feedback').addClass('hidden');
 
   var firstInvalidElement;
@@ -56,59 +55,37 @@ function validateRSVP(attending){
     valid=false;
     firstInvalidElement = document.getElementById("nameQuestion");
   }
+  if(!partnerNamed && isBringingPartner){
+    $('.rsvp-form input[name=additionalguest1]').siblings('.invalid-feedback').removeClass('hidden');
+    valid=false;
+    firstInvalidElement = document.getElementById("additionalguest1");
+  }
   if(!valid){
     firstInvalidElement.scrollIntoView();
   }
   return valid;
 }
 
-function showAdditionalGuestsQuestions(numAdditionalGuests){
+function showPartnerNameQuestion(isBringingPartner){
   var addguest1 = $('.rsvp-form input:text[name=additionalguest1]').parent();
-  var addguest2 = $('.rsvp-form input:text[name=additionalguest2]').parent();
-  var addguest3 = $('.rsvp-form input:text[name=additionalguest3]').parent();
-  addguest1.addClass('hidden');
-  addguest2.addClass('hidden');
-  addguest3.addClass('hidden');
 
-  if(numAdditionalGuests == 1) {
-    addguest1.removeClass('hidden');
-  } else if (numAdditionalGuests == 2) {
-    addguest1.removeClass('hidden');
-    addguest2.removeClass('hidden');
-  } else if (numAdditionalGuests == 3) {
-    addguest1.removeClass('hidden');
-    addguest2.removeClass('hidden');
-    addguest3.removeClass('hidden');
+  if(isBringingPartner) {
+    addguest1.slideDown();
+  } else if (! isBringingPartner) {
+    addguest1.slideUp();
   }
 }
 
 
 function clearUnusedQuestions(attending){
   if(! attending) {
-    $('.rsvp-form select[name=guests]')[0].value = 0;
     $('.rsvp-form textarea[name=dietary_requirements]')[0].value = "-";
     $('#noDundee')[0].checked = "true";
   }
 }
 
-function clearUnusedGuestsNames(numAdditionalGuests){
-  if(numAdditionalGuests == 0) {
-    $('.rsvp-form input:text[name=additionalguest1]')[0].value = "-";
-    $('.rsvp-form input:text[name=additionalguest2]')[0].value = "-";
-    $('.rsvp-form input:text[name=additionalguest3]')[0].value = "-";
-  } else if(numAdditionalGuests == 1) {
-    $('.rsvp-form input:text[name=additionalguest2]')[0].value = "-";
-    $('.rsvp-form input:text[name=additionalguest3]')[0].value = "-";
-  } else if (numAdditionalGuests == 2) {
-    $('.rsvp-form input:text[name=additionalguest3]')[0].value = "-";
-  } else {
-    console.log("Error... num additional guests: "+numAdditionalGuests);
-  }
-}
-
 $( document ).ready(function() {
   pinFooterToggle();
-  var guestCount = $('.rsvp-form select[name=guests]');
 
   $('.rsvp-form input[name=attending]').change(function(){
     var notAttending = $('#noRadio')[0].checked;
@@ -116,13 +93,12 @@ $( document ).ready(function() {
       $("#extendedForm").slideUp();
     } else {
       $("#extendedForm").slideDown();
-      showAdditionalGuestsQuestions(guestCount[0].value);
     }
   });
 
-  guestCount.change(function(){
-    var value = this.value;
-    showAdditionalGuestsQuestions(value);
+  $('.rsvp-form input[name=partner]').change(function(){
+    var isBringingPartner = $('#yesPartner')[0].checked;
+    showPartnerNameQuestion(isBringingPartner);
   });
 
 });
