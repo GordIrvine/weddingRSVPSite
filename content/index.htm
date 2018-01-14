@@ -18,16 +18,17 @@
 <body>
   <header>
     <nav class="navbar navbar-default">
-      <div class="container">
+      <div class="container container--header">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu">
             <span>Menu</span>
-            </button>
+          </button>
           <a href="index.htm" class="navbar-brand">Eibhlis and Gordon</a>
         </div>
         <div class="collapse navbar-collapse" id="collapsemenu">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.htm">Home</a></li>
+            <li><a href="index.htm#wedding-details">On the day</a></li>
             <li><a href="venue.htm">Hotels</a></li>
             <li><a href="aboutus.htm">About us</a></li>
             <li><a href="gifts.htm">Gifts</a></li>
@@ -42,9 +43,8 @@
           <h1>We're getting married!</h1>
           <!-- <h2>Éibhlís and Gordon's Wedding</h2>           -->
           <h2>Saturday June 9th - St. Andrews, Scotland</h2>
-          <a href="rsvp.htm" class="btn btn-default btn-lg" role="button">RSVP Now</a><br>
-          <h2>You can find details about the wedding venue, accommodation, gifts and our story here!</h2><br>
-          <a href="venue.htm" class="btn btn-default btn-lg" role="button">Find details on hotels</a>
+          <h2>Find information on what's happening on the day, where to stay, gifts, and RSVP</h2><br>
+          <a href="rsvp.htm" class="btn btn-default btn-lg" role="button">RSVP</a><br>
         </div>
       </div>
     </div>
@@ -52,16 +52,20 @@
   <main>
     <section class="intro">
       <div class="container">
-        <h3>Please join Éibhlís and Gordon on Saturday, June 9th 2018 as we celebrate our wedding.</h3></div>
+        <h3>Please join Éibhlís and Gordon on Saturday, June 9th 2018 as we celebrate our wedding.</h3>
+        <p class="page-content-intro page-content-intro--centre">Information on what's happening on the day, where to stay, gifts, and RSVP are all on this site. All these links are at the top of the page.</p>
+      </div>
     </section>
     <div class="container">
       <hr>
     </div>
-    <section class="wedding-day-info">
+    <section class="wedding-day-info" id="wedding-details">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
             <h2>Wedding Day Details</h2>
+            <p class="page-content-intro">The whole wedding day will be taking place at Rufflets Hotel just out side St Andrews on the <strong>Saturday 9th June 2018</strong>. Directions and information about where to stay can be found on our <a href="venue.htm" target="_blank">hotels</a> page.</p>
+            <p class="page-content-intro">The plan is for the ceremony to take place outside in the gardens of the hotel but as this is Scotland and we can't guarantee the weather, it may be inside. The call will be made on the day.</p>
           </div>
         </div>
         <div class="row">
@@ -80,19 +84,25 @@
               <div class="panel-heading">
                 <h3>Evening Reception</h3></div>
               <div class="panel-body">
-                <p>20:00<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
+                <p>19:30<br>Rufflets Country House Hotel<br> St Andrews<br> Scotland<br> KY16 9TX<br> T: +44 (0) 1334 472594</p>
               </div>
             </div>
           </div>
         </div>
-        <hr>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Other information</h2>
+            <p class="page-content page-content-intro--centre">The celebration ends at 12:30am</p>
+            <p class="page-content page-content-intro--centre">Parking is available on-site</p>
+          </div>
+        </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><a href="index.htm">Home</a> | <a href="venue.htm">Hotels</a> | <a href="aboutus.htm">About us</a> | <a href="gifts.htm">Gifts</a> | <a href="rsvp.htm">RSVP</a>
+          <p><a href="index.htm">Home</a> | <a href="index.htm#wedding-details">On the day</a> | <a href="venue.htm">Hotels</a> | <a href="aboutus.htm">About us</a> | <a href="gifts.htm">Gifts</a> | <a href="rsvp.htm">RSVP</a>
             <span class="footer-backtotop"><a href="#">Back to top</a></span> </p>
         </div>
       </div>
@@ -102,4 +112,5 @@
   <script src="_js/bootstrap.min.js"></script>
   <script src="_js/script.js"></script>
 </body>
+
 </html>

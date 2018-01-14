@@ -4,8 +4,8 @@ var $form = $('.rsvp-form'),
 $('.rsvp-submit').on('click', function(e) {
   e.preventDefault();
   var attending = $('#yesRadio')[0].checked;
-  var valid = validateRSVP(attending);
   clearUnusedQuestions(attending);
+  var valid = validateRSVP(attending);
 
   if(valid){
   var jqxhr = $.ajax({
@@ -30,21 +30,14 @@ function validateRSVP(attending){
   var name = $('.rsvp-form input[name=name]')[0].value;
   var email = $('.rsvp-form input[name=email]')[0].value;
   var partnerNamed = $('.rsvp-form input:text[name=additionalguest1]')[0].value;
-  var coachAnswered = $('#noDundee')[0].checked || $('#yesDundee')[0].checked;
   var isBringingPartner = $('#yesPartner')[0].checked;
   var valid = true;
   $('.rsvp-form input[name=name]').siblings('.invalid-feedback').addClass('hidden');
   $('.rsvp-form input[name=email]').siblings('.invalid-feedback').addClass('hidden');
   $('.rsvp-form input[name=additionalguest1]').siblings('.invalid-feedback').addClass('hidden');
-  $('.rsvp-form .radio').siblings('.invalid-feedback').addClass('hidden');
 
   var firstInvalidElement;
 
-  if(attending && !coachAnswered){
-    $('.rsvp-form .radio').siblings('.invalid-feedback').removeClass('hidden');
-    valid=false;
-    firstInvalidElement = document.getElementById("dundeeQuestion");
-  }
   if(!email || ! /^(.+)@(.+){2,}\.(.+){2,}$/.test(email)){
     $('.rsvp-form input[name=email]').siblings('.invalid-feedback').removeClass('hidden');
     valid=false;
@@ -80,7 +73,7 @@ function showPartnerNameQuestion(isBringingPartner){
 function clearUnusedQuestions(attending){
   if(! attending) {
     $('.rsvp-form textarea[name=dietary_requirements]')[0].value = "-";
-    $('#noDundee')[0].checked = "true";
+    $('#noPartner')[0].checked = "true";
   }
 }
 

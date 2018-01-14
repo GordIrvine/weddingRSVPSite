@@ -24,6 +24,10 @@ h1, h2 {
 
 /*Navbar styles only*/
 
+.container--header {
+  border-bottom: 2px solid white;
+}
+
 .navbar-default {
   margin-bottom: 0;
   padding-top: 10px;
@@ -31,6 +35,10 @@ h1, h2 {
   background: none;
   background-color: rgba(0,0,0,0);
   z-index: 100;
+}
+
+.navbar-nav {
+  font-size: 1.2em;
 }
 
 .navbar-rsvp  {
@@ -51,7 +59,7 @@ h1, h2 {
 
 @media (min-width : 768px) {
   .navbar-default .navbar-nav>li>a {
-    color: rgb(255,206,143);
+    color: gold;
   }
 }
 .navbar-default .navbar-nav .navbar-rsvp>a {
@@ -87,6 +95,12 @@ color: blue;
 
 .navbar-toggle span {
   font-size: 20px;
+}
+
+@media (max-width : 767px) {
+  .navbar-default {
+    padding-top: 0;
+  }
 }
 
 /*Header Images styles*/
@@ -143,6 +157,14 @@ color: blue;
   color: white;
 }
 
+.header-link {
+  color: white;
+}
+
+.header-link:hover {
+  color: gold;
+}
+
 /* Footer styles*/
 
 .footer {
@@ -176,10 +198,6 @@ color: blue;
 h3 {
   text-align: center;
 }
-
-/*a {
-  text-decoration: underline;
-}*/
 
 .intro h3 {
   margin-top: 0;
@@ -230,10 +248,19 @@ iframe {
   border-radius: 0;
 }
 
+.page-content {
+  text-align: justify;
+  font-size: 2rem;
+}
+
 .page-content-intro {
   padding-top: 2rem;
   text-align: justify;
   font-size: 2rem;
+}
+
+.page-content-intro--centre {
+  text-align: center;
 }
 
 .hotel-name-header {
@@ -243,6 +270,13 @@ iframe {
 
 .content-paragraph {
   font-size: 1.7rem;
+}
+
+.content-paragrapgh--margin {
+  margin-top: 20px;
+}
+.content-paragraph--justified {
+  text-align: justify;
 }
 
 .directions-header {
